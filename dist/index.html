@@ -3,96 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0a102a" />
-    <meta name="description" content="Its For You: halaman ucapan personal dengan alamat spesial untuk ulang tahun, anniversary, dan momen yang ingin dikenang." />
-    <title>Its For You — Satu halaman untuk seseorang yang spesial</title>
+    <meta name="theme-color" content="#f1f1ed" />
+    <meta name="description" content="Its For You adalah konsep halaman ucapan personal untuk ulang tahun dan anniversary, dengan alamat subdomain sesuai nama penerima." />
+    <title>Its For You | Ucapan yang punya alamat</title>
     <link rel="icon" type="image/png" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="page-glow page-glow--one" aria-hidden="true"></div>
-    <div class="page-glow page-glow--two" aria-hidden="true"></div>
-
-    <div class="site-shell">
+    <div class="page-frame">
       <header class="site-header">
         <div class="brand" aria-label="Its For You">
-          <img class="brand__mark" src="assets/logo.png" width="53" height="40" alt="" />
-          <span class="brand__name">its for you<span class="brand__dot">.</span></span>
+          <img src="assets/logo.png" width="42" height="32" alt="" />
+          <span>its for you<span class="brand-period">.</span></span>
         </div>
-        <span class="header-note"><span class="header-note__spark" aria-hidden="true">✦</span> a little corner of the internet, made personal</span>
+        <span class="site-address">itsforyou.web.id</span>
       </header>
 
-      <main class="hero">
-        <section class="hero__content" aria-labelledby="hero-title">
-          <div class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span> RUANG KECIL UNTUK MOMEN BESAR</div>
-          <h1 id="hero-title">Satu halaman.<br /><span class="hero__title-gradient">Sejuta rasa.</span></h1>
-          <p class="hero__lead">Ubah ucapan jadi pengalaman yang bisa dibuka, dibaca, dan dikenang. Untuk ulang tahun, anniversary, atau seseorang yang selalu punya tempat spesial.</p>
+      <main class="card" aria-labelledby="page-title">
+        <section class="card-front">
+          <div class="card-front__content">
+            <h1 id="page-title">Ucapan yang<br />punya alamat.</h1>
+            <p class="introduction">Buat halaman ucapan untuk ulang tahun atau anniversary, lalu bagikan lewat alamat khusus untuk penerimanya.</p>
 
-          <div class="occasion-list" aria-label="Cocok untuk">
-            <span>Ulang tahun</span>
-            <span class="occasion-list__divider" aria-hidden="true"></span>
-            <span>Anniversary</span>
-            <span class="occasion-list__divider" aria-hidden="true"></span>
-            <span>Just because</span>
-          </div>
+            <div class="name-demo">
+              <label for="recipient">Coba nama penerima</label>
+              <input id="recipient" name="recipient" type="text" maxlength="24" autocomplete="off" placeholder="Contoh: nama kamu" aria-describedby="preview-help" />
+              <p id="preview-help">Pratinjau saja, alamat belum dibuat.</p>
+            </div>
 
-          <div class="hero__action">
-            <a class="button-primary" href="https://tataweb.id/" target="_blank" rel="noopener noreferrer" aria-label="Pesan halaman spesial di tataweb.id, buka tab baru">
-              Buat halaman spesialmu
-              <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-            </a>
-            <span class="action-hint">Pemesanan melalui <strong>tataweb.id</strong></span>
+            <a class="order-link" href="https://tataweb.id/">Pesan lewat tataweb.id</a>
           </div>
         </section>
 
-        <section class="showcase" aria-label="Ilustrasi contoh halaman ucapan personal">
-          <div class="orbit orbit--outer" aria-hidden="true"></div>
-          <div class="orbit orbit--inner" aria-hidden="true"></div>
-          <div class="floating-star floating-star--one" aria-hidden="true">✦</div>
-          <div class="floating-star floating-star--two" aria-hidden="true">✧</div>
-          <div class="floating-star floating-star--three" aria-hidden="true">✦</div>
+        <section class="card-back" aria-labelledby="sample-heading">
+          <div class="card-back__top"><span id="sample-heading">Contoh halaman</span><span>Ulang tahun</span></div>
 
-          <div class="side-card side-card--left" aria-hidden="true">
-            <span class="side-card__heart">♡</span>
-            <span>our little<br />forever</span>
-          </div>
-          <div class="side-card side-card--right" aria-hidden="true">
-            <span class="side-card__shine">✳</span>
-            <span>make a<br />wish</span>
-          </div>
+          <article class="sample" data-ui aria-label="Contoh kartu ucapan">
+            <p class="sample__address" id="sample-address" aria-live="polite">nama.itsforyou.web.id</p>
+            <div class="sample__message">
+              <p class="sample__to">Untuk <span id="sample-name">kamu</span>,</p>
+              <h2>Selamat<br />ulang tahun.</h2>
+              <p class="sample__wish">Semoga hari ini terasa hangat, seru, dan penuh orang yang sayang padamu.</p>
+            </div>
+            <div class="sample__signoff"><span>Dengan sayang,</span><span>its for you.</span></div>
+          </article>
 
-          <div class="preview-window">
-            <div class="preview-window__chrome">
-              <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="address"><svg viewBox="0 0 16 16" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.6" y="7" width="8.8" height="6.4" rx="1.2"/><path d="M5.5 7V5.3a2.5 2.5 0 0 1 5 0V7"/></svg> untuk-nadia.itsforyou.web.id</span>
-              <span class="chrome-menu" aria-hidden="true">•••</span>
-            </div>
-            <div class="greeting-card">
-              <span class="greeting-card__mini">A LITTLE SOMETHING FOR YOU</span>
-              <div class="greeting-card__illustration" aria-hidden="true">
-                <span class="illustration-sun"></span>
-                <span class="illustration-flower illustration-flower--one">✿</span>
-                <span class="illustration-flower illustration-flower--two">✿</span>
-                <span class="illustration-heart">♥</span>
-              </div>
-              <span class="greeting-card__script">happy birthday!</span>
-              <strong>Hari ini tentang kamu.</strong>
-              <p>Dan semua hal indah yang membuatmu jadi kamu.</p>
-              <span class="greeting-card__signature">with love, someone special ♡</span>
-            </div>
-          </div>
-          <div class="preview-label"><span class="preview-label__dot"></span> Contoh halaman personal</div>
         </section>
       </main>
 
-      <footer class="site-footer">
-        <span>itsforyou.web.id</span>
-        <span>Setiap cerita pantas punya tempatnya sendiri.</span>
-        <span>made with feeling <span aria-hidden="true">♡</span></span>
-      </footer>
     </div>
   </body>
 </html>
